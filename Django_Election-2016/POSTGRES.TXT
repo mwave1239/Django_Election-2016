@@ -1,0 +1,18 @@
+1) pg_ctl -D /usr/local/var/postgresDB -l logfile start
+    a) initdb /usr/local/var/postgresDB -E utf8 #(If not started)
+
+2) username$ brew services list
+
+3) username$ brew services run services postgres
+    a) netstat -an | grep -i listen #(view open ports)
+    b) psql
+
+4) To remove:
+    a) brew services stop postgresql
+    b) brew uninstall postgresql
+    c) sudo dscl . -list /Users
+    d) sudo dscl . -delete /Users/_postgres #(any postgresql)
+    e) brew update
+    f) brew install postgresql
+    g) Should go here /usr/local/Cellar/postgresql/9.6.3/bin/initdb /usr/local/var/postgres
+    h) initialized DB /usr/local/var/postgres
